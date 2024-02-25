@@ -1,0 +1,36 @@
+h2{
+    font-size: 25px;
+}
+
+span{
+    color:red;
+}
+
+textarea{
+    margin-top: 3.5px;
+}
+
+
+.container p{
+    color:#ffff;
+}
+.myimg{
+    /* border:1px solid purple; */
+    border-radius: 50%;
+    width: 200px;
+   
+   
+}
+#cv-template{
+    display:none;
+}
+.background{
+background:#343541;
+}
+textarea::-webkit-scrollbar {
+    display: none;
+  }
+textarea{
+    resize:none;
+}
+

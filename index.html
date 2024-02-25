@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container" id="cv-form">
+        <h1 class="text-center my-4">Resume Generator</h1>
+
+        <div class="row">
+            <div class="col-md-6">
+
+                <h2>Personal Information</h2>
+
+                <div class="form-group mt-2">
+                    <label for="namefield">Your Name <span>*</span></label>
+                    <input type="text" id="namefield" class="form-control" placeholder="enter your name">
+                </div>
+
+                <div class="form-group mt-3">
+                    <label for="contactfield">Contact <span>*</span></label>
+                    <input type="text" id="contactfield" class="form-control" placeholder="enter your contact">
+                </div>
+
+
+                <div class="form-group mt-3">
+                    <label for="emailfield">E-Mail <span>*</span></label>
+                    <input id="emailfield" class="form-control" placeholder="enter your E-Mail" />
+                </div>
+
+
+                <div class="form-group mt-3">
+                    <label for="">Select your photo</label>
+                    <input id="imgfield" type="file" class="form-control">
+
+                </div>
+
+                <p class="text-secondary my-3">Social Media</p>
+
+                <div class="form-group mt-2">
+                    <label for="Githubfield">GitHub <span>*</span></label>
+                    <input type="text" id="Githubfield" class="form-control" placeholder="enter here">
+                </div>
+
+                <div class="form-group mt-2">
+                    <label for="linkfield">Linkedin <span>*</span></label>
+                    <input type="text" id="linkfield" class="form-control" placeholder="enter here">
+                </div>
+
+
+
+            </div>
+
+            <div class="col-md-6">
+
+
+                <h2>Professional Information</h2>
+
+
+                <div class="form-group mt-2"> 
+                    <label for="objfield">Objective <span>*</span></label>
+                    <textarea class="form-control" id="objfield" rows="7" placeholder="Enter Objective"></textarea>
+                </div>
+
+                <div class="form-group mt-2" id="we">
+                    <label for="expfield">Experience</label>
+                    <textarea class="form-control wefield" id="expfield" placeholder="Enter Here"></textarea>
+
+                    <div class="container text-center mt-2" id="webutton">
+
+                        <button class="btn btn-primary btn-sm" onclick="addnewwefield()">Add</button>
+                    </div>
+                </div>
+
+                <div class="form-group mt-2" id="E">
+                    <label for="acdfield">Education <span>*</span></label>
+                    <textarea class="form-control efield" id="acdfield" placeholder="Enter Here"></textarea>
+
+                    <div class="container text-center mt-2" id="ebutton">
+
+                        <button class="btn btn-primary btn-sm" onclick="addnewE()">Add</button>
+                    </div>
+                </div>
+
+                <div class="form-group mt-2" id="Skills">
+                    <label for="skillsfield">Skills</label>
+                    <textarea class="form-control sfield" id="skillsfield" placeholder="Enter Here"></textarea>
+
+                    <div class="container text-center mt-2" id="skillbutton">
+
+                        <button class="btn btn-primary btn-sm" onclick="addnewS()">Add</button>
+                    </div>
+                </div>
+
+
+                <div class="form-group mt-2" id="Projects">
+                    <label for="profield">Projects</label>
+                    <textarea rows="5" class="form-control pfield" id="projectsfield" placeholder="Enter Here"></textarea>
+
+                    <div class="container text-center mt-2" id="pbutton">
+
+                        <button class="btn btn-primary btn-sm" onclick="addnewP()">Add</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="container text-center mt-3">
+
+            <button class="btn btn-primary btn-md" onclick="generateResume()">Generate Resume</button>
+        </div>
+
+
+
+    </div>
+    <!-- cv template section -->
+    <div class="container" id="cv-template">
+        <div class="row">
+            <div class="col-md-4 text-center py-5 background">
+
+                <img src="https://static.vecteezy.com/system/resources/previews/003/337/511/original/default-avatar-photo-placeholder-profile-icon-female-vector.jpg"
+                    alt="img" class="img-fluid myimg" id="imgT">
+
+                <div class="container">
+
+                    <p id="nameT1">Mahima Bhugra</p>
+                    <p id="contactT">6758456734</p>
+                    <p id="mailT">mahima.bhugra04@gmail.com</p>
+                    <hr />
+
+                    <p><a id="linkT" href="www.linkedin.com/in/mahima-bhugra-63a409231">www.linkedin.com/in/mahima-bhugra-63a409231</a>
+                    </p>
+                    <p><a id="githubT" href="https://github.com/Mahima369">https://github.com/Mahima369</a></p>
+                </div>
+
+            </div>
+            <div class="col-md-8 py-5">
+
+                <h1 class="text-center" id="nameT2" style="font-weight: 950px">Aspiring Software Engineer</h1>
+
+                <div class="card mt-4">
+                    <div class="card-header background">
+                        <h3 style="color:#ffff">Objective</h3>
+                    </div>
+                    <div class="card-body">
+                        <p id="objT" style="color:black">
+                            
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card mt-4">
+                    <div class="card-header background">
+                        <h3 style="color:#ffff">Experience</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul id="weT">
+                           
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="card mt-4">
+                    <div class="card-header background">
+                        <h3 style="color:#ffff">Education</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul id="educationT">
+                            
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card mt-4">
+                    <div class="card-header background">
+                        <h3 style="color:#ffff">Skills</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul id="skillsT">
+                           
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card mt-4">
+                    <div class="card-header background">
+                        <h3 style="color:#ffff">Projects</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul id="projectsT">
+                           
+                        </ul>
+                    </div>
+                </div>
+                <div class="container mt-3 text-center">
+                    <button class="btn background" onclick="printCV()" style="color:white">Print Resume</button>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
